@@ -38,7 +38,7 @@ self.addEventListener('fetch', function(event) {
         else{
             fetch(event.request).then(
                 (data)=>{
-                  cache.put(event.request,data);
+                  cache.add(event.request,data);
                     return event;
                 }
             )
