@@ -38,8 +38,8 @@ self.addEventListener('fetch', function(event) {
         else{
             fetch(event.request).then(
                 (data)=>{
-                  cache.add(event.request,data);
-                    return event;
+                  cache.put(event.request,data.clone());
+                    return data;
                 }
             )
         }
