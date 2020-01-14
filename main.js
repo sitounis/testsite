@@ -17,6 +17,7 @@ setTimeout(() => {
     .then(
         (data)=>{
             alert(data);
+            document.getElementById("p1").innerHTML = JSON.stringify(data);
         }
     )
 }, 2000);
