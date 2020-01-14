@@ -5,12 +5,12 @@ self.addEventListener('install', function(event) {
     // ...
     console.log("Service Worker install....");
 
-  let intallPromise = new Promise(function(resolve,reject){
-    setTimeout(() => {
-        resolve();
-    }, 3000);  
-  });
-  event.waitUntil(intallPromise);
+//   let intallPromise = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         resolve();
+//     }, 3000);  
+//   });
+//   event.waitUntil(intallPromise);
 });
 // // Activate 
 self.addEventListener('activate', function(event) {
@@ -26,7 +26,7 @@ self.addEventListener('fetch', function(event) {
     // ...
    // debugger;
    // if(event.request.url=="https://api.github.com/repos/twbs/bootstrap"){
-        debugger;
+        //debugger;
         event.respondWith(async function() {
             // Try to get the response from a cache.
         const cache = await caches.open('dynamic-v1');
