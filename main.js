@@ -19,7 +19,7 @@ setTimeout(() => {
             document.getElementById("p1").innerHTML = JSON.stringify(data);
         }
     )
-}, 2000);
+}, 100);
 
 function clickbutton() {
     window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
