@@ -1,4 +1,4 @@
-navigator.serviceWorker.register("./service-worker1.js").then(
+navigator.serviceWorker.register("./service-worker.js").then(
 (data)=>{
     console.log("SW successfull registerd");
 },
