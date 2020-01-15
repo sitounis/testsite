@@ -33,15 +33,15 @@ self.addEventListener('fetch', function(event) {
             
         const cachedResponse = await cache.match(event.request);
         if(cachedResponse){
-            //return cachedResponse;
-            event.respondWith(new Response( cachedResponse));
+            return cachedResponse;
+            //event.respondWith(new Response( cachedResponse));
         }
         else{
             fetch(event.request).then(
                 (data)=>{
                  // cache.put(event.request,data.clone());
-                  event.respondWith(new Response(data));
-                   // return data;
+                  //event.respondWith(new Response(data));
+                   return data;
                 }
             )
         }
