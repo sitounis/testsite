@@ -1,4 +1,4 @@
-await navigator.serviceWorker.register("./service-worker.js");
+var z=await navigator.serviceWorker.register("./service-worker.js");
 
 setTimeout(() => {
     fetch("https://api.github.com/repos/twbs/bootstrap").then(
