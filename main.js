@@ -16,7 +16,11 @@ setTimeout(() => {
     )
     .then(
         (data)=>{
-            alert(data);
+            document.getElementById("p1").innerHTML = JSON.stringify(data);
         }
     )
 }, 2000);
+
+function clickbutton() {
+    window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
+}
