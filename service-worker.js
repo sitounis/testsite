@@ -5,7 +5,10 @@ const pwaCache="dynamic-v2";
 // // Activate 
 self.addEventListener('install', function(event) {
 
-    var cache= await caches.open(pwaCache);
+    event.waitUntil(
+        caches.open(pwaCache).then()
+    )
+   
 
 });
 
