@@ -1,11 +1,9 @@
 navigator.serviceWorker.register("./service-worker.js");
 
 setTimeout(() => {
-    fetch("https://api.github.com/repos/twbs/bootstrap").then(
-        (data)=>{
-           return data.json();
-        }
-
+    fetch("https://api.github.com/repos/twbs/bootstrap")
+    .then(
+        (data)=>{ return data.json();}
     )
     .then(
         (data)=>{
@@ -15,5 +13,5 @@ setTimeout(() => {
 }, 3000);
 
 function clickbutton() {
-    window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
+    //window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
 }
