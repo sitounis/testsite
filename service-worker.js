@@ -2,11 +2,15 @@ console.log("Service Worker file is executing....");
 
 const pwaCache="dynamic-v2";
 
+const staticCache= ["/main.js"];
+
 // // Activate 
 self.addEventListener('install', function(event) {
 
     event.waitUntil(
-        caches.open(pwaCache).then()
+        caches.open(pwaCache).then(cache=>{
+            cache.addAll(staticCache);
+        })
     )
    
 

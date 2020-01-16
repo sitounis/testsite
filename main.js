@@ -14,4 +14,5 @@ setTimeout(() => {
 
 function clickbutton() {
     //window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
+    alert("web app implementation ");
 }
