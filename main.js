@@ -1,4 +1,4 @@
-//navigator.serviceWorker.register("./service-worker.js");
+navigator.serviceWorker.register("./service-worker.js");
 
 setTimeout(() => {
     // fetch("https://api.github.com/repos/twbs/bootstrap")
@@ -12,7 +12,7 @@ setTimeout(() => {
     // )
 }, 3000);
 
-function clickbutton() {
+function clickbutton(x) {
     //window.webkit.messageHandlers.dostuffMessageHandler.postMessage({param1:"aa",param2:"555"});
     //alert("web app implementation ");
     document.getElementById("p1").innerHTML = "web app implementation";
